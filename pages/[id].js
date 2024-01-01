@@ -1,5 +1,6 @@
 import ItemContext from "@/Context/ItemContext";
 import CarDescription from "@/components/CarDescription"; // Import the correct CarDescription component
+import Link from "next/link";
 import { useEffect, useContext, useState } from "react";
 
 function DetailsScreen() {
@@ -42,7 +43,22 @@ function DetailsScreen() {
 
   return (
     <div className="z-50">
-      {loading ? <div>Loading ... </div> : car && <CarDescription car={car} />}
+      {loading ? (
+        <div>Loading ... </div>
+      ) : (
+        car && (
+          <div>
+            {" "}
+            <Link
+              href="/"
+              className="text-black hover:underline absolute left-3 top-4"
+            >
+              ← Back
+            </Link>{" "}
+            <CarDescription car={car} />
+          </div>
+        )
+      )}
     </div>
   );
 }

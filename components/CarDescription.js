@@ -3,7 +3,7 @@ import { FaCar, FaGasPump, FaCogs, FaMapMarkerAlt } from "react-icons/fa";
 
 const CarDescription = ({ car }) => {
   return (
-    <div className="container mx-auto px-4 mt-8">
+    <div className="container mx-auto px-4 mt-8 relative">
       <div className="max-w-screen-md mx-auto bg-white rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105 duration-300">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
           <div className="mb-8 md:mb-0">
